@@ -6,13 +6,8 @@ navigation history that also transitions its views in and out.
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
   <!-- Dashboard Tab -->
-<ion-tab title="Home" icon-off="ion-home" icon-on="ion-home" href="#/tab/dash">
-  <ion-nav-view name="tab-dash"></ion-nav-view>
-</ion-tab>
-
-  <!-- Facebook Tab -->
-  <ion-tab title="Facebook" icon-off="ion-social-facebook" icon-on="ion-social-facebook" href="#/tab/facebook">
-    <ion-nav-view name="tab-facebook"></ion-nav-view>
+  <ion-tab title="Home" icon-off="ion-home" icon-on="ion-home" href="#/tab/dash" onselect="dash.onTabSelected(this)">
+    <ion-nav-view name="tab-dash"></ion-nav-view>
   </ion-tab>
 
   <!-- Find Tab -->
@@ -24,7 +19,5 @@ navigation history that also transitions its views in and out.
   <ion-tab title="Account" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account">
     <ion-nav-view name="tab-account"></ion-nav-view>
   </ion-tab>
-
-
 
 </ion-tabs>

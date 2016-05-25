@@ -47,15 +47,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-  .state('tab.facebook', {
-    url: '/facebook',
-    views: {
-      'tab-facebook': {
-        templateUrl: 'templates/tab-facebook.html',
-        controller: 'FacebookCtrl'
-      }
-    }
-  })
   .state('tab.find', {
       url: '/find',
       views: {
