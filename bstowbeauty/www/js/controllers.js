@@ -12,7 +12,7 @@ angular.module('starter.controllers', [])
       }, 20);
     }
   }
-}]);
+}])
 
 .controller('ProfileCtrl', function($scope) {
 
