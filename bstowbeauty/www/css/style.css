@@ -1,8 +1,4 @@
 /* Empty. Add your own CSS if you like */
-/*.padding
-{
-  background-color: #cf00ee;
-}*/
 .dash-item
 {
   background-color: rgba(180, 220, 200, 0.7);
@@ -12,4 +8,8 @@
 .dash-item a:link, a:visited
 {
   color: #4acc4a;
+}
+.item-avatar div
+{
+  text-align: right;
 }

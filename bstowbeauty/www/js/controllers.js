@@ -1,17 +1,8 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
-  this.onTabSelected = function(_scope){
-    console.log(_scope);
-    if(_scope.title === 'Home') {
-      setTimeout(function() {
-        $state.go('tabs.home', {});
-      },20);
-      }
-    }
-  })
+.controller('DashCtrl', function($scope) {})
 
-.controller('FindCtrl', function($scope) {})
+.controller('AboutCtrl', function($scope) {})
 
 .controller('AccountCtrl', function($scope) {})
 
@@ -21,4 +12,12 @@ angular.module('starter.controllers', [])
 
 .controller('SpecialsCtrl', function($scope) {})
 
-.controller('PricesCtrl', function($scope) {});
+.controller('MainCtrl', ['$state', function($state) {
+  this.onTabSelected = function(_scope) {
+    if(_scope.title === 'Home') {
+      setTimeout(function() {
+        $state.go('tab.dash', {});
+      }, 20);
+    }
+  }
+}]);

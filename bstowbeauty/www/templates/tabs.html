@@ -6,13 +6,13 @@ navigation history that also transitions its views in and out.
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
   <!-- Dashboard Tab -->
-  <ion-tab title="Home" icon-off="ion-home" icon-on="ion-home" href="#/tab/dash" onselect="dash.onTabSelected(this)">
+  <ion-tab title="Home" icon-off="ion-home" icon-on="ion-home" href="#/tab/dash" on-select="main.onTabSelected(this)">
     <ion-nav-view name="tab-dash"></ion-nav-view>
   </ion-tab>
 
-  <!-- Find Tab -->
-  <ion-tab title="Find" icon-off="ion-location" icon-on="ion-location" href="#/tab/find">
-    <ion-nav-view name="tab-find"></ion-nav-view>
+  <!-- About -->
+  <ion-tab title="About" icon-off="ion-location" icon-on="ion-location" href="#/tab/about">
+    <ion-nav-view name="tab-about"></ion-nav-view>
   </ion-tab>
 
   <!-- Account Tab -->
