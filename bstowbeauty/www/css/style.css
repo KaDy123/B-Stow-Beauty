@@ -9,7 +9,17 @@
 {
   color: #4acc4a;
 }
+
 .item-avatar div
 {
   text-align: right;
+}
+
+#map {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.scroll {
+  height: 100%;
 }

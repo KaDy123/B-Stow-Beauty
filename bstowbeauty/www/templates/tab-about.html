@@ -1,5 +1,5 @@
 <ion-view view-title="About">
-  <ion-content class="padding">
+  <ion-content class="padding" ng-init="init()">
     <div class="card">
       <div class="item item-divider">
         About
@@ -31,7 +31,7 @@
         <div class="item item-divider">
           Map
         </div>
-        <img class="full-image" src="">
+        <div id="map" data-tap-disabled="true"></div>
       </div>
     </div>
     <div class="card">
