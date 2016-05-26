@@ -25,7 +25,7 @@ angular.module('starter.controllers', [])
 
 
 .controller('LoginCtrl', function($scope) {
-
+})
 .controller('EditProfileCtrl', function($scope) {
 
 

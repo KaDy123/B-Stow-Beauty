@@ -72,7 +72,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'tab-login': {
         templateUrl: 'templates/tab-login.html',
         controller: 'LoginCtrl'
-
+    }
+  }
+})
   .state('tab.editProfile', {
     url: '/profile/editProfile',
     views: {
