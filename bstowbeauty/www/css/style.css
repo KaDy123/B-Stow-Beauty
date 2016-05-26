@@ -32,8 +32,18 @@
 {
   text-align: right;
 }
+
 #login
 {
   margin-left:auto;
   margin-right: auto;
+
+#profile-interests
+{
+  width: 100%;
+}
+#profile-info input
+{
+  background-color: #fff;
+
 }

@@ -11,6 +11,11 @@ angular.module('starter.controllers', [])
         $state.go('tab.dash', {});
       }, 20);
     }
+    if(_scope.title === 'Profile') {
+      setTimeout(function() {
+        $state.go('tab.profile', {});
+      }, 20);
+    }
   }
 }])
 
@@ -18,7 +23,11 @@ angular.module('starter.controllers', [])
 
 })
 
+
 .controller('LoginCtrl', function($scope) {
+
+.controller('EditProfileCtrl', function($scope) {
+
 
 })
 
