@@ -23,3 +23,11 @@
 .scroll {
   height: 100%;
 }
+#profile-info
+{
+  width: 100%;
+}
+#profile-info td:nth-of-type(2)
+{
+  text-align: right;
+}
