@@ -31,8 +31,33 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ServicesCtrl', function($scope) {
+.controller('FacialCtrl', function($scope){
 
+})
+
+.controller('NailCtrl', function($scope){
+
+})
+
+.controller('BodyCtrl', function($scope){
+
+})
+
+.controller('WaxingCtrl', function($scope){
+
+})
+
+.controller('LaserCtrl', function($scope){
+
+})
+
+.controller('MedicalCtrl', function($scope){
+
+})
+
+.controller('ServicesCtrl', function($scope, Prices) {
+  Prices.setServiceType("facial");
+  $scope.prices = Prices.getPrices();
 })
 
 .controller('AppointmentsCtrl', function($scope) {

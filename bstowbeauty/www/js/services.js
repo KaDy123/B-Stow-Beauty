@@ -1,6 +1,18 @@
-angular.module('starter.services', [])
-
-.factory('Chats', function() {
+angular.module('starter.services', ['ionic', 'firebase'])
+.factory('Prices', ['$firebaseArray', function($firebaseArray){
+  var priceRef = new Firebase('https://b-stow-beauty.firebaseio.com/price');
+  var service_type = "";
+  return {
+    getPrices(){
+      var ref = priceRef.child(service_type);
+      return $firebaseArray(ref);
+    },
+    setServiceType(name){
+      service_type = name;
+    }
+  }
+}]);
+/*.factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
@@ -47,4 +59,4 @@ angular.module('starter.services', [])
       return null;
     }
   };
-});
+});*/

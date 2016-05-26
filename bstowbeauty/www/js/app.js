@@ -5,9 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'firebase'])
 
-.run(function($ionicPlatform) {
+/*.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,7 +21,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       StatusBar.styleDefault();
     }
   });
-})
+})*/
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -91,6 +91,60 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'tab-dash': {
         templateUrl: 'templates/tab-services.html',
         controller: 'ServicesCtrl'
+        }
+      }
+  })
+  .state('tab.facial', {
+    url: '/dash/services/facial',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/tab-facial.html',
+        controller: 'FacialCtrl'
+        }
+      }
+  })
+  .state('tab.nail', {
+    url: '/dash/services/nail',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/tab-nail.html',
+        controller: 'NailCtrl'
+        }
+      }
+  })
+  .state('tab.body', {
+    url: '/dash/services/body',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/tab-body.html',
+        controller: 'BodyCtrl'
+        }
+      }
+  })
+  .state('tab.waxing', {
+    url: '/dash/services/waxing',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/tab-waxing.html',
+        controller: 'WaxingCtrl'
+        }
+      }
+  })
+  .state('tab.laser', {
+    url: '/dash/services/laser',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/tab-laser.html',
+        controller: 'LaserCtrl'
+        }
+      }
+  })
+  .state('tab.medical', {
+    url: '/dash/services/medical',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/tab-medical.html',
+        controller: 'MedicalCtrl'
         }
       }
   })
