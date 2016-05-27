@@ -1,13 +1,13 @@
 /* Empty. Add your own CSS if you like */
 .dash-item
 {
-  background-color: rgba(180, 220, 200, 0.7);
+  background-color: rgba(62,176,247, 0.7);
   border: none;
   border-radius: 3px;
 }
 .dash-item a:link, a:visited
 {
-  color: #4acc4a;
+  color: #9932CC;
 }
 
 .item-avatar div
