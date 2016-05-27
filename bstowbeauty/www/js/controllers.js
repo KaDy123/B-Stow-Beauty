@@ -19,6 +19,10 @@ angular.module('starter.controllers', [])
   }
 }])
 
+.controller('ServiceCategoryCtrl', ['$state', function($state){
+
+}])
+
 .controller('ProfileCtrl', function($scope) {
 
 })
