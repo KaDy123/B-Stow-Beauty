@@ -64,7 +64,45 @@ angular.module('starter.controllers', [])
   $scope.prices = Prices.getPrices();
 })
 
-.controller('AppointmentsCtrl', function($scope) {
+.controller('AppointmentsCtrl', function($scope,Reviews,Items) {
+  $scope.items = Items;
+
+$scope.addItem = function() {
+  var name = prompt ('Service');
+  var date= prompt('Date');
+  if (name){
+    $scope.items.$add({
+      'name':name,
+      'date':date
+    });
+}
+
+};
+  $scope.reviews = Reviews;
+
+  $scope.addReview = function() {
+    var comment = prompt ('How was your experience?');
+
+    if (comment){
+      $scope.reviews.$add({
+        'comment':comment
+
+      });
+}
+};
+
+
+
+$scope.deleteItem=function (item){
+  $scope.item=item;
+  $scope.item['status']='deleted';
+  $ionicAppointmentsDelegate.closeOptionButtons();
+};
+$scope.deleteItem=function (item){
+  $scope.item=item;
+  $scope.item['status']='deleted';
+  $ionicAppointmentsDelegate.closeOptionButtons();
+};
 
 })
 

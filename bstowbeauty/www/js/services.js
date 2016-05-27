@@ -11,6 +11,14 @@ angular.module('starter.services', ['ionic', 'firebase'])
       service_type = name;
     }
   }
+}])
+.factory('Items',['$firebaseArray',function($firebaseArray){
+  var itemsRef= new Firebase ('https://b-stow-beauty.firebaseio.com/items');
+  return $firebaseArray(itemsRef);
+}])
+.factory('Reviews',['$firebaseArray',function($firebaseArray){
+  var reviewsRef= new Firebase ('https://b-stow-beauty.firebaseio.com/reviews');
+  return $firebaseArray(reviewsRef);
 }]);
 /*.factory('Chats', function() {
   // Might use a resource here that returns a JSON array

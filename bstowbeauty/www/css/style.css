@@ -1,18 +1,27 @@
 /* Empty. Add your own CSS if you like */
+h1
+{
+  color:#9932CD;
+}
 .dash-item
 {
-  background-color: rgba(62,176,247, 0.7);
+  background-color: rgba(211,211,211, 0.7);
   border: none;
   border-radius: 3px;
+  font-size:1.5em;
 }
 .dash-item a:link, a:visited
 {
-  color: #9932CC;
+  color: #fff;
 }
 
 .item-avatar div
 {
   text-align: right;
+}
+.icon
+{
+  color:#9932CD;
 }
 #map
 {
@@ -23,6 +32,29 @@
 .scroll
 {
   height: 100%;
+}
+.bgimg
+{
+   background-image: url("../img/bg1.jpg");
+   background-size:100%;
+
+}
+.servicesImgSize
+{
+  height: 100px;
+  width:100px;
+  display:inline-block;
+  border-right: 7px;
+}
+.servicesImgSize img
+{
+  height: auto;
+  max-width:100%;
+}
+.servicesBgStyle
+{
+    background-color: rgba(153, 50, 204, 0.9);
+    color: black;
 }
 #profile-info
 {
