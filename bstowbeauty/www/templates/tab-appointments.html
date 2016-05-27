@@ -2,9 +2,8 @@
   <ion-view view-title="Appointments">
   <ion-content class="padding">
  <button class="button icon-left ion-plus" ng-click="addItem()">Book Appointment</button>
-
-
- <button class="button icon-left ion-plus" ng-click="addReview()"><h2>Reviews</h2></button>
+ <h2>Reviews</h2>
+ <button class="button icon-left ion-plus" ng-click="addReview()">Add Review</button>
  <ion-list>
      <ion-item ng-repeat="review in reviews" ng-class="{deleted: review.status == 'deleted'}">
      {{review.comment}}
@@ -26,7 +25,6 @@
         </ion-option-button>
         </ion-item>
       </ion-list>
-    <h2>Calendar</h2>
   </ion-content>
 </ion-view>
 </body>

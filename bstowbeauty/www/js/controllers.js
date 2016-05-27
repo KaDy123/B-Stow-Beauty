@@ -106,6 +106,12 @@ $scope.deleteItem=function (item){
 
 })
 
+/*$scope.deleteItem=function (item){
+  $scope.item=item;
+  $scope.item['status']='deleted';
+  $ionicAppointmentsDelegate.closeOptionButtons();
+};*/
+
 .controller('SpecialsCtrl', function($scope) {
 
 })
