@@ -94,16 +94,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
   })
-  .state('tab.facial', {
-    url: '/dash/services/facial',
+
+  .state('tab.individual', {
+    url: '/dash/services/:serviceType',
     views: {
       'tab-dash': {
-        templateUrl: 'templates/tab-facial.html',
-        controller: 'FacialCtrl'
-        }
+        templateUrl: 'templates/tabs-individual.html',
+        controller: 'IndividualCtrl'
       }
+    }
   })
-  .state('tab.nail', {
+
+  /*.state('tab.nail', {
     url: '/dash/services/nail',
     views: {
       'tab-dash': {
@@ -147,7 +149,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         controller: 'MedicalCtrl'
         }
       }
-  })
+  })*/
   .state('tab.appointments', {
     url: '/dash/appointments',
     views: {

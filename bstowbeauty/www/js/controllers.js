@@ -19,6 +19,14 @@ angular.module('starter.controllers', [])
   }
 }])
 
+.controller('IndividualCtrl', function($scope, $firebaseArray, $stateParams) {
+  //$scope.individual = "This is it";
+  console.log("it works");
+  var priceRef = new Firebase('https://b-stow-beauty.firebaseio.com/price/' + $stateParams.serviceType);
+  $scope.priceInfo = $firebaseArray(priceRef);
+
+})
+
 .controller('ServiceCategoryCtrl', ['$state', function($state){
 
 }])
@@ -60,8 +68,8 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ServicesCtrl', function($scope, Prices) {
-  Prices.setServiceType("facial");
-  $scope.prices = Prices.getPrices();
+  /*Prices.setServiceType("facial");
+  $scope.prices = Prices.getPrices();*/
 })
 
 .controller('AppointmentsCtrl', function($scope,Reviews,Items) {

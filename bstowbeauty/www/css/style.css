@@ -1,11 +1,17 @@
 /* Empty. Add your own CSS if you like */
 h1
 {
-  color:#9932CD;
+  color: #dfccde;
+  /*color:#9932CD;*/
+  text-shadow: 2px 1px 5px #ad23ac;
+  font-family: cursive;
+  font-style: italic;
+  font-size: 360%;
+  font-weight: bold;
 }
 .dash-item
 {
-  background-color: rgba(190,140,191, 0.4);
+  background-color: rgba(180,100,180, 0.4);
   border: none;
   border-radius: 3px;
   font-size:1.5em;
@@ -38,6 +44,11 @@ h1
    background-image: url("../img/bg1.jpg");
    background-size:100%;
 
+}
+.page-bg
+{
+  background-image: url("../img/background3.png");
+  background-size: 100%;
 }
 .servicesImgSize
 {

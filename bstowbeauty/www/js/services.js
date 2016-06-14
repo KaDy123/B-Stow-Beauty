@@ -1,5 +1,5 @@
 angular.module('starter.services', ['ionic', 'firebase'])
-.factory('Prices', ['$firebaseArray', function($firebaseArray){
+/*.factory('Prices', ['$firebaseArray', function($firebaseArray){
   var priceRef = new Firebase('https://b-stow-beauty.firebaseio.com/price');
   var service_type = "";
   return {
@@ -11,7 +11,13 @@ angular.module('starter.services', ['ionic', 'firebase'])
       service_type = name;
     }
   }
+}])*/
+
+.factory('Prices', ['$firebaseArray', function($firebaseArray){
+  var priceRefs = new Firebase('https://b-stow-beauty.firebaseio.com/price/facial');
+  return $firebaseArray(priceRefs);
 }])
+
 .factory('Items',['$firebaseArray',function($firebaseArray){
   var itemsRef= new Firebase ('https://b-stow-beauty.firebaseio.com/items');
   return $firebaseArray(itemsRef);
