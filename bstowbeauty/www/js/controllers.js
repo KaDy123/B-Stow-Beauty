@@ -11,9 +11,9 @@ angular.module('starter.controllers', [])
         $state.go('tab.dash', {});
       }, 20);
     }
-    if(_scope.title === 'Profile') {
+    if(_scope.title === 'Settings') {
       setTimeout(function() {
-        $state.go('tab.profile', {});
+        $state.go('tab.settings', {});
       }, 20);
     }
   }
@@ -31,15 +31,39 @@ angular.module('starter.controllers', [])
 
 }])
 
+.controller('SettingsCtrl', function($scope) {
+
+})
+
+.controller('ExploreCtrl', function($scope) {
+
+})
+
+.controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
+    $scope.data = {};
+
+    $scope.login = function() {
+        LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
+            $state.go('tab.dash');
+        }).error(function(data) {
+            var alertPopup = $ionicPopup.alert({
+                title: 'Login failed!',
+                template: 'Please check your credentials!'
+            });
+        });
+    }
+})
+
 .controller('ProfileCtrl', function($scope) {
 
 })
 
-
-.controller('LoginCtrl', function($scope) {
-})
 .controller('EditProfileCtrl', function($scope) {
 
+
+})
+
+.controller('HelpCtrl', function($scope) {
 
 })
 

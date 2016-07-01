@@ -2,9 +2,7 @@
 h1
 {
   color: #dfccde;
-  /*color:#9932CD;*/
   text-shadow: 2px 1px 5px #ad23ac;
-  font-family: cursive;
   font-style: italic;
   font-size: 360%;
   font-weight: bold;
@@ -16,18 +14,13 @@ h1
   border-radius: 3px;
   font-size:1.5em;
 }
-.dash-item a:link, a:visited
+.ion-chevron-right
 {
-  color: #fff;
-}
 
+}
 .item-avatar div
 {
   text-align: right;
-}
-.icon
-{
-  color:#9932CD;
 }
 #map
 {
@@ -75,7 +68,6 @@ h1
 {
   text-align: right;
 }
-
 #login
 {
   margin-left:auto;

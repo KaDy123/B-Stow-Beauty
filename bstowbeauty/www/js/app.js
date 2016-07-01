@@ -6,7 +6,9 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'firebase'])
-
+.config(function($ionicConfigProvider) {
+    $ionicConfigProvider.tabs.position('bottom');
+})
 /*.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -47,44 +49,73 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
-  .state('tab.about', {
-      url: '/about',
+
+  .state('tab.explore', {
+      url: '/explore',
       views: {
-        'tab-about': {
+        'tab-explore': {
+          templateUrl: 'templates/tab-explore.html',
+          controller: 'ExploreCtrl'
+        }
+      }
+    })
+
+  .state('tab.settings', {
+    url: '/settings',
+    views: {
+      'tab-settings': {
+        templateUrl: 'templates/tab-settings.html',
+        controller: 'SettingsCtrl'
+      }
+    }
+  })
+
+  .state('tab.about', {
+      url: '/settings/about',
+      views: {
+        'tab-settings': {
           templateUrl: 'templates/tab-about.html',
           controller: 'AboutCtrl'
         }
       }
     })
+
   .state('tab.profile', {
-    url: '/profile',
+    url: '/settings/profile',
     views: {
-      'tab-profile': {
+      'tab-settings': {
         templateUrl: 'templates/tab-profile.html',
         controller: 'ProfileCtrl'
       }
     }
   })
 
-  .state('tab.login', {
-    url: '/login',
+  .state('tab.help', {
+    url: '/settings/help',
     views: {
-      'tab-login': {
-        templateUrl: 'templates/tab-login.html',
-        controller: 'LoginCtrl'
+      'tab-settings': {
+        templateUrl: 'templates/tab-help.html',
+        controller: 'HelpCtrl'
+      }
     }
-  }
-})
+  })
+
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'LoginCtrl'
+  })
+
   .state('tab.editProfile', {
     url: '/profile/editProfile',
     views: {
       'tab-profile': {
         templateUrl: 'templates/tab-editprofile.html',
         controller: 'EditProfileCtrl'
-
       }
     }
   })
+
   .state('tab.services', {
     url: '/dash/services',
     views: {
@@ -171,6 +202,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  //$urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/login');
 
 });

@@ -9,18 +9,13 @@ navigation history that also transitions its views in and out.
     <ion-nav-view name="tab-dash"></ion-nav-view>
   </ion-tab>
 
-  <!-- About -->
-  <ion-tab title="About" icon-off="ion-information-circled" icon-on="ion-information-circled" href="#/tab/about">
-    <ion-nav-view name="tab-about"></ion-nav-view>
+  <!-- Explore -->
+  <ion-tab title="Explore" icon-off="ion-compass" icon-on="ion-compass" href="#/tab/explore">
+    <ion-nav-view name="tab-explore"></ion-nav-view>
   </ion-tab>
 
-  <!-- Profile Tab -->
-  <ion-tab title="Profile" icon-off="ion-person" icon-on="ion-person" href="#/tab/profile" on-select="main.onTabSelected(this)">
-    <ion-nav-view name="tab-profile"></ion-nav-view>
+  <!-- Settings Tab -->
+  <ion-tab title="Settings" icon-off="ion-gear-a" icon-on="ion-gear-a" href="#/tab/settings" on-select="main.onTabSelected(this)">
+    <ion-nav-view name="tab-settings"></ion-nav-view>
   </ion-tab>
-
-  <!-- Login Tab -->
-  <!--<ion-tab title="Login" icon-off="ion-person" icon-on="ion-person" href="#/tab/login">
-    <ion-nav-view name="tab-login"></ion-nav-view>
-  </ion-tab>-->
 </ion-tabs>
